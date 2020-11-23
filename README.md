@@ -1,9 +1,9 @@
 # mysql-docker
 
-*mysql8 的docker  镜像文件
+* mysql8 的docker  镜像文件
 
-*密码加密规则：mysql_native_password
-*去除sql_mode ： ONLY_FULL_GROUP_BY 分组限制
+* 密码加密规则：mysql_native_password
+* 去除sql_mode ： ONLY_FULL_GROUP_BY 分组限制
 
 
 #镜像启动 
