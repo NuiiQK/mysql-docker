@@ -27,7 +27,7 @@
 > docker cp mysql:/etc/mysql /usr/local/mysql/conf
 
 ## 数据映射到指定目录
-> docker stop mysql
-> docker rm mysql
+> docker stop mysql   
+> docker rm mysql   
 > docker run --restart=always --name mysql -p 3306:3306 -v 本地配置路径:/etc/mysql -v 本地存放数据路径:/var/lib/mysql/ -e MYSQL_ROOT_PASSWORD=数据库密码 -d nuiiqk/mysql:latest
 
