@@ -10,7 +10,7 @@
 > docker pull nuiiqk/mysql
 
 [自动重启启动]
-> docker run --restart=always --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=数据库密码 -d nuiiqk/mysql:latest
+> docker run --restart=always --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=数据库密码 -v [/app/docker/data/mysql/data本地磁盘]:/var/lib/mysql:rw -v /app/docker/data/mysql/fiels:/var/lib/mysql-files:rw -v /app/docker/data/mysql/logs:/var/log/mysql:rw -d nuiiqk/mysql:latest
 
 # 进入docker镜像
 > docker exec -it [镜像ID] bash
