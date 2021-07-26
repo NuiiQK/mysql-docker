@@ -18,19 +18,3 @@ mkdir -p {/app/docker/data/mysql/data,/app/docker/data/mysql/files,/app/docker/d
 # 进入docker镜像
 > docker exec -it [镜像ID] bash
 
-# 防止容器崩溃-可以进行以下操作：
-## 查询数据库存放目录
-> mysql -uroot -p
-> # Enter password:
-
-> show variables like '%datadir%';
-
-
-## 拷贝容器配置文件
-> docker cp mysql:/etc/mysql /usr/local/mysql/conf
-
-## 数据映射到指定目录
-> docker stop mysql   
-> docker rm mysql   
-> docker run --restart=always --name mysql -p 3306:3306 -v 本地配置路径:/etc/mysql -v 本地存放数据路径:/var/lib/mysql/ -e MYSQL_ROOT_PASSWORD=数据库密码 -d nuiiqk/mysql:latest
-
